@@ -1,0 +1,300 @@
+-- Table: public.atendimento_cliente
+
+-- DROP TABLE IF EXISTS public.atendimento_cliente;
+
+CREATE TABLE IF NOT EXISTS public.atendimento_cliente
+(
+    id_atendimento integer NOT NULL DEFAULT nextval('atendimento_cliente_id_atendimento_seq'::regclass),
+    situacao boolean,
+    avaliacao_loja integer,
+    sugestao character varying(200) COLLATE pg_catalog."default",
+    avaliacao_produto integer,
+    codigo_produto integer NOT NULL DEFAULT nextval('atendimento_cliente_codigo_produto_seq'::regclass),
+    CONSTRAINT atendimento_cliente_pkey PRIMARY KEY (id_atendimento)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.atendimento_cliente
+    OWNER to postgres;
+
+
+
+-- Table: public.cliente
+
+-- DROP TABLE IF EXISTS public.cliente;
+
+CREATE TABLE IF NOT EXISTS public.cliente
+(
+    codigo integer NOT NULL DEFAULT nextval('cliente_codigo_seq'::regclass),
+    cpf character varying COLLATE pg_catalog."default" NOT NULL DEFAULT nextval('cliente_codigo_seq'::regclass),
+    nome character varying(30) COLLATE pg_catalog."default",
+    endereco character varying(60) COLLATE pg_catalog."default",
+    telefone character varying COLLATE pg_catalog."default",
+    senha character varying(16) COLLATE pg_catalog."default",
+    email character varying(50) COLLATE pg_catalog."default",
+    fk_atendimento_cliente_id_atendimento integer,
+    CONSTRAINT cliente_pkey PRIMARY KEY (codigo)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.cliente
+    OWNER to postgres;
+
+
+
+-- Table: public.entregador
+
+-- DROP TABLE IF EXISTS public.entregador;
+
+CREATE TABLE IF NOT EXISTS public.entregador
+(
+    codigo integer NOT NULL DEFAULT nextval('entregador_codigo_seq'::regclass),
+    veiculo character varying(30) COLLATE pg_catalog."default",
+    habilitacao integer,
+    nome character varying(30) COLLATE pg_catalog."default",
+    data_baixa timestamp without time zone,
+    CONSTRAINT entregador_pkey PRIMARY KEY (codigo)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.entregador
+    OWNER to postgres;
+
+
+
+
+-- Table: public.fornecedor
+
+-- DROP TABLE IF EXISTS public.fornecedor;
+
+CREATE TABLE IF NOT EXISTS public.fornecedor
+(
+    codigo integer NOT NULL DEFAULT nextval('fornecedor_codigo_seq'::regclass),
+    nome character varying(30) COLLATE pg_catalog."default",
+    cnpj character varying(30) COLLATE pg_catalog."default",
+    situacao boolean,
+    data_baixo timestamp without time zone,
+    CONSTRAINT fornecedor_pkey PRIMARY KEY (codigo)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.fornecedor
+    OWNER to postgres;
+
+
+
+-- Table: public.login
+
+-- DROP TABLE IF EXISTS public.login;
+
+CREATE TABLE IF NOT EXISTS public.login
+(
+    nome character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    email character varying(15) COLLATE pg_catalog."default" NOT NULL,
+    senha character varying(16) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT login_pkey PRIMARY KEY (email)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.login
+    OWNER to postgres;
+
+
+
+-- Table: public.pagamento
+
+-- DROP TABLE IF EXISTS public.pagamento;
+
+CREATE TABLE IF NOT EXISTS public.pagamento
+(
+    nome_completo character varying(15) COLLATE pg_catalog."default" NOT NULL,
+    numero_cartao integer NOT NULL DEFAULT nextval('pagamento_numero_cartao_seq'::regclass),
+    cvv integer NOT NULL DEFAULT nextval('pagamento_cvv_seq'::regclass),
+    CONSTRAINT pagamento_pkey PRIMARY KEY (numero_cartao)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.pagamento
+    OWNER to postgres;
+
+
+
+-- Table: public.pagamentoloja
+
+-- DROP TABLE IF EXISTS public.pagamentoloja;
+
+CREATE TABLE IF NOT EXISTS public.pagamentoloja
+(
+    nome_completo character varying(15) COLLATE pg_catalog."default" NOT NULL,
+    numero_cartao integer NOT NULL DEFAULT nextval('pagamentoloja_numero_cartao_seq'::regclass),
+    cvv integer NOT NULL DEFAULT nextval('pagamentoloja_cvv_seq'::regclass),
+    CONSTRAINT pagamentoloja_pkey PRIMARY KEY (numero_cartao)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.pagamentoloja
+    OWNER to postgres;
+
+
+
+-- Table: public.pedido
+
+-- DROP TABLE IF EXISTS public.pedido;
+
+CREATE TABLE IF NOT EXISTS public.pedido
+(
+    codigo integer NOT NULL DEFAULT nextval('pedido_codigo_seq'::regclass),
+    endereco character varying(60) COLLATE pg_catalog."default",
+    nome character varying(30) COLLATE pg_catalog."default",
+    data_entrega date,
+    data_compra date,
+    situacao boolean,
+    fk_entregador_codigo integer,
+    CONSTRAINT pedido_pkey PRIMARY KEY (codigo)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.pedido
+    OWNER to postgres;
+
+
+
+-- Table: public.produto
+
+-- DROP TABLE IF EXISTS public.produto;
+
+CREATE TABLE IF NOT EXISTS public.produto
+(
+    codigo integer NOT NULL DEFAULT nextval('produto_codigo_seq'::regclass),
+    nome character varying(200) COLLATE pg_catalog."default",
+    genero character varying(40) COLLATE pg_catalog."default",
+    tamanho character varying(2) COLLATE pg_catalog."default",
+    "time" character varying(30) COLLATE pg_catalog."default",
+    codigo_produto integer NOT NULL DEFAULT nextval('produto_codigo_produto_seq'::regclass),
+    fk_fornecedor_codigo integer,
+    CONSTRAINT produto_pkey PRIMARY KEY (codigo)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.produto
+    OWNER to postgres;
+
+
+
+-- Table: public.relacionamento_2
+
+-- DROP TABLE IF EXISTS public.relacionamento_2;
+
+CREATE TABLE IF NOT EXISTS public.relacionamento_2
+(
+    fk_produto_codigo integer,
+    fk_pedido_codigo integer,
+    CONSTRAINT fk_relacionamento_2_2 FOREIGN KEY (fk_pedido_codigo)
+        REFERENCES public.pedido (codigo) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE RESTRICT
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.relacionamento_2
+    OWNER to postgres;
+
+
+
+-- Table: public.relacionamento_4
+
+-- DROP TABLE IF EXISTS public.relacionamento_4;
+
+CREATE TABLE IF NOT EXISTS public.relacionamento_4
+(
+    fk_cliente_codigo integer,
+    fk_pedido_codigo integer,
+    CONSTRAINT fk_relacionamento_4_2 FOREIGN KEY (fk_pedido_codigo)
+        REFERENCES public.pedido (codigo) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE SET NULL
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.relacionamento_4
+    OWNER to postgres;
+
+
+
+
+-- Table: public.relacionamento_7
+
+-- DROP TABLE IF EXISTS public.relacionamento_7;
+
+CREATE TABLE IF NOT EXISTS public.relacionamento_7
+(
+    fk_pedido_codigo integer,
+    CONSTRAINT fk_relacionamento_7_1 FOREIGN KEY (fk_pedido_codigo)
+        REFERENCES public.pedido (codigo) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE SET NULL
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.relacionamento_7
+    OWNER to postgres;
+
+
+
+
+-- Table: public.relacionamento_8
+
+-- DROP TABLE IF EXISTS public.relacionamento_8;
+
+CREATE TABLE IF NOT EXISTS public.relacionamento_8
+(
+    fk_atendimento_cliente_id_atendimento integer,
+    fk_pedido_codigo integer,
+    CONSTRAINT fk_relacionamento_8_2 FOREIGN KEY (fk_pedido_codigo)
+        REFERENCES public.pedido (codigo) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE SET NULL
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.relacionamento_8
+    OWNER to postgres;

@@ -1,0 +1,87 @@
+.desktop-1 {
+    
+    height: 500px;
+    width: 100%;
+    padding: 0px;
+    position: absolute;
+}
+
+.forms {
+    color: #000000;
+    text-align: center;
+    vertical-align: text-top;
+    font-size: 30px;
+    font-family: Poppins;
+    left: 500px;
+    top: 300px;
+    width: 1300px;
+    height: 700px;
+    position: absolute;
+    
+    
+}
+
+.enviar {
+    color: #000000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    text-align: center;
+    vertical-align: text-top;
+    font-size: 26px;
+    font-family: Poppins;
+    position: absolute;
+    line-height: auto;
+    border-radius: 16px;
+}
+
+.teladecadastro {
+    color: #ffffff;
+    text-align: center;
+    vertical-align: text-top;
+    font-size: 40px;
+    font-family: Poppins;
+    top: 463px;
+    width: 430px;
+    position: absolute;
+    line-height: auto;
+}
+
+#preparo {
+    background-color: grey;
+        display: inline;
+}
+
+#rota {
+    background-color: grey;
+    display: inline;
+}
+
+#entregue {
+    background-color: grey;
+    display: inline;
+}
+
+#status {
+    margin: 100px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: -5px 6px #65B1E8;
+    border: 3px solid #65B1E8;
+    color: #65B1E8;
+    font-weight: 400;
+    font-size: 1em;
+    transition: all ease-in 0.2s;
+    border-radius: 50px;
+}
+.btn:hover,
+.btn:focus{
+    background: #65B1E8;
+    color: #FFF;
+    border-color: #65B1E8;
+    box-shadow: none;
+}
+

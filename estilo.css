@@ -1,0 +1,68 @@
+
+
+.forms
+{
+color:#000000;
+text-align:center;
+vertical-align:text-top;
+font-size:30px;
+font-family:Georgia, 'Times New Roman', Times, serif;
+left:791px;
+top:100px;
+width:500px;
+height:30px;
+position:absolute;
+line-height:auto;
+}
+
+.submit {
+    height: 40px;
+    width:86px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.enviar
+{
+color:#000000;
+background-color: #65b0e7;
+text-align:center;
+vertical-align:text-top;
+font-size:26px;
+font-family:Georgia, 'Times New Roman', Times, serif;
+position:absolute;
+border-radius:16px;
+}
+
+.teladecadastro
+{
+color:#ffffff;
+text-align:center;
+vertical-align:text-top;
+font-size:40px;
+font-family:Georgia, 'Times New Roman', Times, serif;
+top:463px;
+width:430px;
+position:absolute;
+line-height:auto;
+}
+.btn{
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: -5px 6px #65B1E8;
+    border: 3px solid #65B1E8;
+    color: #65B1E8;
+    font-weight: 400;
+    font-size: 1em;
+    transition: all ease-in 0.2s;
+    border-radius: 50px;
+}
+.btn:hover,
+.btn:focus{
+    background: #65B1E8;
+    color: #FFF;
+    border-color: #65B1E8;
+    box-shadow: none;
+}
+

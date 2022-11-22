@@ -1,0 +1,69 @@
+.tela{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height:787px;
+    width:417px;
+    filter:drop-shadow(0px px 0px rgba(0, 0, 0, 0.25));
+    border-radius:16px;
+    display: flex;
+    align-items:top;
+    
+}
+.nomepagina{
+    text-align: center;
+    vertical-align:text-top;
+    line-height:auto;
+    color: #FFFFFF;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.cupom{
+    right: 30%;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.col-md-8{
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#textodesconto{
+    background-color:#E7E8EB;     
+    height:46px;
+    width:200px;
+    text-align: center;
+    border-radius:18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.subtotal{
+    text-align: right;
+}
+.desconto{
+    text-align: right;
+}
+.valores{
+    text-align: right;
+}
+.botaototal{
+    text-align: right;
+}
+.taxadeentrega{
+    text-align: right;
+}
+.btn{
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: -5px 6px #65B1E8;
+    border: 3px solid #65B1E8;
+    color: #65B1E8;
+    font-weight: 400;
+    font-size: 1em;
+    transition: all ease-in 0.2s;
+    border-radius: 50px;
+}
+.btn:hover,
+.btn:focus{
+    background: #65B1E8;
+    color: #FFF;
+    border-color: #65B1E8;
+    box-shadow: none;
+}

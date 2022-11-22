@@ -1,0 +1,151 @@
+.titulo{
+    color:#65b0e7;
+    text-align:center;
+    vertical-align:text-top;
+    font-size:280%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-self:flex-start;
+    left:35%;
+    top:15%;
+    position:absolute;
+    line-height:auto;
+    width:30%;
+    }
+    
+    .forms{
+        color:#000000;
+        text-align:center;
+        vertical-align:text-top;
+        font-size:200%;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        align-self:flex-start;
+        left:35%;
+        top:28%;
+        position:absolute;
+        line-height:auto;
+        width:30%;
+        
+        }
+    
+    .botaoboleto{
+    color:#000000;
+    text-align:center;
+    vertical-align:text-top;
+    font-size:200%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-self:flex-start;
+    left:35%;
+    top:65%;
+    position:absolute;
+    line-height:auto;
+    width:30%;
+    }
+    
+    .qrcode{
+    left:43%;
+    top: 80%;
+    position:absolute;
+    line-height:auto;
+    width: 15%;
+    bottom: 50%;
+
+    }
+    
+    .btn{
+        display: inline-block;
+        padding: 0.5em 1.5em;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: -5px 6px #65B1E8;
+        border: 3px solid #65B1E8;
+        color: #65B1E8;
+        font-weight: 400;
+        font-size: 1em;
+        transition: all ease-in 0.2s;
+        border-radius: 50px;
+    }
+    
+    .btn:hover,
+    .btn:focus{
+        background: #65B1E8;
+        color: #FFF;
+        border-color: #65B1E8;
+        box-shadow: none;
+    }
+    
+    .botaocartaocredito{
+        color:#000000;
+        text-align:center;
+        vertical-align:text-top;
+        font-size:200%;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        align-self:flex-start;
+        left:35%;
+        top:28%;
+        position:absolute;
+        line-height:auto;
+        width:30%;
+    }
+    
+    .botaocartaoloja{
+    color:#000000;
+    text-align:center;
+    vertical-align:text-top;
+    font-size:200%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-self:flex-start;
+    left:35%;
+    top:42%;
+    position:absolute;
+    line-height:auto;
+    width:30%;
+    }
+    
+    .botaoboleto2{
+        color:#000000;
+        text-align:center;
+        vertical-align:text-top;
+        font-size:200%;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        align-self:flex-start;
+        left:35%;
+        top:56%;
+        position:absolute;
+        line-height:auto;
+        width:30%;
+    }
+    
+    .botaopix{
+    color:#000000;
+    text-align:center;
+    vertical-align:text-top;
+    font-size:200%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-self:flex-start;
+    left:35%;
+    top:70%;
+    position:absolute;
+    line-height:auto;
+    width:30%;
+    }
+
+    .btn{
+        display: inline-block;
+        padding: 0.5em 1.5em;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: -5px 6px #65B1E8;
+        border: 3px solid #65B1E8;
+        color: #65B1E8;
+        font-weight: 400;
+        font-size: 1em;
+        transition: all ease-in 0.2s;
+        border-radius: 50px;
+    }
+    .btn:hover,
+    .btn:focus{
+        background: #65B1E8;
+        color: #FFF;
+        border-color: #65B1E8;
+        box-shadow: none;
+    }

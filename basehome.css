@@ -1,0 +1,408 @@
+html {
+  min-height: 100%;
+  background-color: rgb(241, 240, 231);
+}
+.logo {
+  bottom: 60%;
+  left: 8%;
+  position: relative;
+}
+
+.rectanglea {
+  background-color: #7288d7;
+  opacity: 40%;
+  height: 180px;
+  width: 100%;
+  top: 0px;
+  right: 5px;
+  position: absolute;
+}
+
+.rectangle2 {
+  background-image: url("https://i.postimg.cc/Gp53Nv2p/jap.jpg");
+  height: 17%;
+  width: 100%;
+  top: 0px;
+  right: 0px;
+  position: absolute;
+}
+
+.barra {
+  font-size: 75%;
+  width: auto;
+  width: 200%;
+  top: 14%;
+  position: absolute;
+  left: 0%;
+}
+.internacionais {
+  color: #ffffff;
+  text-align: left;
+  vertical-align: text-top;
+  font-size: 36px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  left: 600px;
+  top: 161px;
+  width: 266px;
+  height: 54px;
+  position: absolute;
+  line-height: auto;
+}
+.brasileiros {
+  color: #ffffff;
+  text-align: left;
+  vertical-align: text-top;
+  font-size: 36px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  left: 250px;
+  top: 161px;
+  width: 192px;
+  height: 54px;
+  position: absolute;
+  line-height: auto;
+}
+
+.seleções {
+  color: #ffffff;
+  text-align: left;
+  vertical-align: text-top;
+  font-size: 36px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  left: 1000px;
+  top: 161px;
+  width: 163px;
+  height: 54px;
+  position: absolute;
+  line-height: auto;
+}
+
+.contato {
+  color: #ffffff;
+  text-align: left;
+  vertical-align: text-top;
+  font-size: 36px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  left: 1550px;
+  top: 161px;
+  width: 150px;
+  height: 54px;
+  position: absolute;
+  line-height: auto;
+}
+
+nav {
+  display: inline;
+  max-width: 350px;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  background-color: var(#0000);
+}
+
+nav ul li {
+  margin-left: 210px;
+  display: inline-block;
+}
+
+nav ul li a {
+  font-size: 150%;
+  color: #ffee;
+  padding: 8px;
+  display: block;
+  text-transform: inherit;
+  text-decoration: none;
+}
+
+nav ul li a::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 4px;
+  border-radius: 100px;
+  left: 50%;
+  background: #fff;
+  transition: width 0.2s ease 0s, left 0.2s ease 0s;
+  width: 0;
+}
+
+nav ul li a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+@media screen and (max-height: 300px) {
+  ul {
+      margin-top: 30px;
+  }
+
+}
+
+nav ul ul {
+  display: none;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  transition: all .3s;
+}
+
+.slider {
+  display: block;
+  height: 400px;
+  width: 800px;
+  margin: auto;
+  margin-left: 180px;
+  margin-top: 270px;
+  position: relative;
+  transition: .6s;
+}
+
+.slider li {
+  list-style: none;
+  position: absolute;
+}
+
+.slider img {
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  vertical-align: top;
+}
+
+.slider input {
+  display: none;
+}
+
+.slider label {
+  background-color: #000;
+  bottom: 10px;
+  cursor: pointer;
+  display: block;
+  height: 10px;
+  position: absolute;
+  width: 10px;
+  z-index: 10;
+}
+
+.slider label:hover {
+  background-color: #ffff;
+}
+
+.slider li:nth-child(1) label {
+  left: 10px;
+}
+
+.slider li:nth-child(2) label {
+  left: 40px;
+}
+
+.slider li:nth-child(3) label {
+  left: 70px;
+}
+
+.slider img {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.slider li input:checked~img {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+  margin-left: 0;
+}
+
+.borda {
+  left: 200px;
+}
+
+.rectangle3 {
+  background-color: #65b0e7;
+  height: 8%;
+  width: 80%;
+  left: 10%;
+  top: 15%;
+  position: absolute;
+  box-shadow: 1px 2px 4px;
+}
+.rectangle5 {
+  background-color: #65b0e7;
+  height: 14%;
+  width: 70%;
+  border-radius: 10px;
+  top: 88%;
+  left: 15%;
+  position: absolute;
+}
+.ellipse {
+  background-color: #ffffff;
+  height: 70%;
+  width: 6%;
+  top: 8%;
+  left: 8%;
+  position: absolute;
+  border-radius: 100%;
+}
+
+.boleiroimports {
+  color: #ffffff;
+  font-size: 150%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  left: 17%;
+  top: 5%;
+  width: 20%;
+  height: 20%;
+  position: absolute;
+}
+
+.rectangle6 {
+  background-color: #ffffff;
+  box-shadow: 2px 3px 3px;
+  height: 1%;
+  width: 16%;
+  top: 10%;
+  left: 17%;
+  position: absolute;
+}
+
+.rectangle18 {
+  background-color: #ffffff;
+  box-shadow: 2px 3px 3px;
+  height: 1%;
+  width: 13%;
+  top: 12%;
+  left: 17%;
+  position: absolute;
+}
+
+.rectangle7 {
+  height: 50%;
+  width: 50%;
+  top: 56%;
+  left: 60%;
+  position: absolute;
+}
+.rectangle8 {
+  height: 50%;
+  width: 50%;
+  top: 27%;
+  left: 60%;
+  position: absolute;
+}
+.slider{
+  width: 46%;
+  margin-top: 14%;
+  margin-left: 6%;
+}
+.media-scroller {
+  --_spacer: 13%;
+  display: grid;
+  gap: 2%;
+  grid-auto-flow: column;
+  grid-auto-columns: 20%;
+
+  overflow-x: scroll;
+}
+
+.media-element {
+  display: grid;
+  grid-template-rows: min-content;
+  gap: var(--_spacer);
+  padding: var(--_spacer);
+  background: var(--surface-2);
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-2);
+}
+
+.media-element>img {
+  inline-size: 70%;
+  object-fit: cover;
+}
+
+.snaps-inline {
+  width: 50%;
+  left: 24%;
+  top: 87%;
+  position: absolute;
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: var(--_spacer, 1rem);
+}
+
+.snaps-inline>* {
+  scroll-snap-align: start;
+}
+
+.pesquisa {
+  margin-top: 2%;
+}
+
+.search-container {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  left: 40%;
+}
+
+.search-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.search-icon::before {
+  content: '';
+  width: 20%;
+  height: 25%;
+  border-radius: 50%;
+  border: 2px solid #f2cb05;
+}
+
+.search-icon::after {
+  content: '';
+  width: 20%;
+  height: 2px;
+  background-color: #f2cb05;
+}
+
+.search-input {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  padding-left: 40px;
+}
+
+.search-input:focus {
+  width: 250px;
+  box-shadow: 2px 2px 5px #777;
+}
+
+.search-input:valid {
+  width: 250px;
+}
+
+.links {
+  top: 50%;
+  align-items: center;
+  text-align: center;
+  margin-top: 90%;
+}
+
+.rectangle5 {
+  background-color: #65b0e7;
+  height: 14%;
+  width: 70%;
+  border-radius: 10px;
+  top: 88%;
+  left: 15%;
+  position: absolute;
+}
